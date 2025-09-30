@@ -10,6 +10,7 @@ import { AboutPage } from './views/AboutPage'
 import { OffersPage } from './views/OffersPage'
 import { AdminPage } from './views/AdminPage'
 import { ContactPage } from './views/ContactPage'
+import { Analytics } from './Analytics'
 
 const router = createBrowserRouter([
   {
@@ -28,5 +29,10 @@ const router = createBrowserRouter([
 ])
 
 const root = createRoot(document.getElementById('root') as HTMLElement)
-root.render(<RouterProvider router={router} />)
+root.render(
+  <>
+    <RouterProvider router={router} />
+    <Analytics />
+  </>
+)
 
